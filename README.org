@@ -7,12 +7,12 @@ A fork from [[https://github.com/RickMoynihan/yasnippet-org-mode][RickMoynihan/y
 * How to build snippets for org mode
 
 1. Go to =`yas-snippet-dirs'= in your system.
-2. Copy and paste =snippets.org= as =`yas-snippet-dirs'= / =snippets.org=.
+2. Copy and paste =snippets.org= as =`yas-snippet-dirs' / snippets.org=.
 3. Create =org-mode= directory under =`yas-snippet-dirs'=.
 4. Edit =snippets.org=.
 5. Tangle =snippets.org= by =M-x org-tangle-babel=.
 
-Then, snippets for org mode will be created in =`yas-snippet-dirs'= / =org-mode=.
+Then, snippets for org mode will be created in =`yas-snippet-dirs' / org-mode=.
 
 Note: existing snippets will be overwritten when tangling.
 
