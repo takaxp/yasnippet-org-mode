@@ -1,0 +1,190 @@
+#+title: A source file to tangle snippets for Org mode
+#+startup: content
+* org mode
+** author
+#+begin_src snippet :tangle "org-mode/author"
+#name : Author
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+AUTHOR: ${1:`user-full-name`}
+#+end_src
+
+** block
+#+begin_src snippet :tangle "org-mode/block"
+#name : #+begin_...#+end_
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+,#+begin_$1 $2
+  $0
+,#+end_$1
+#+end_src
+
+** desc
+#+begin_src snippet :tangle "org-mode/desc"
+#name : DESCRIPTION
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+DESCRIPTION: ${0}
+#+end_src
+
+** ditaa
+#+begin_src snippet :tangle "org-mode/dita"
+#name : DITAA
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+BEGIN_DITAA ${1:export-file-name} -r -S -E
+${0}
+,#+END_DITAA
+#+end_src
+
+** docbook
+#+begin_src snippet :tangle "org-mode/docbook"
+#name : DOCBOOK
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+BEGIN_DOCBOOK
+${0}
+,#+END_DOCBOOK
+#+end_src
+
+** email
+#+begin_src snippet :tangle "org-mode/email"
+#name : Email
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+EMAIL: ${1:`user-mail-address`}
+#+end_src
+
+** html
+#+begin_src snippet :tangle "org-mode/html"
+#name : HTML
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+BEGIN_HTML
+${0}
+,#+END_HTML
+#+end_src
+
+** inc
+#+begin_src snippet :tangle "org-mode/inc"
+#name : Author
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+INCLUDE: "${1:file}" ${2:src-example-quote} ${3:mode}
+
+#+end_src
+
+** keywords
+#+begin_src snippet :tangle "org-mode/keywords"
+#name : KEYWORDS
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+KEYWORDS: ${0}
+#+end_src
+
+** lang
+#+begin_src snippet :tangle "org-mode/lang"
+#name : LANGUAGE
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+LANGUAGE: ${1:en}
+#+end_src
+
+** latex
+#+begin_src snippet :tangle "org-mode/latex"
+#name : LATEX
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+BEGIN_LATEX
+${0}
+,#+END_LATEX
+#+end_src
+
+** options
+#+begin_src snippet :tangle "org-mode/options"
+#name : OPTIONS
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+OPTIONS: ${0}
+
+#+end_src
+
+** prop
+#+begin_src snippet :tangle "org-mode/prop"
+#name : Properties Folded
+#contributor : Jonathan Arkell <jonnay@jonnay.net>
+# --
+ :PROPERTIES:
+ :VISIBILITY:folded:
+ :END:
+#+end_src
+
+** res
+#+begin_src snippet :tangle "org-mode/res"
+#name : Org-Babel RESNAME Block
+#contributor : Rick Moynihan
+# --
+,#+RESNAME:
+
+#+end_src
+
+** sb
+#+begin_src snippet :tangle "org-mode/sb"
+#name : #+srcname:..#+begin_src...#+end_src
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+,#+srcname: ${1:name}
+,#+begin_src ${2:language} $3
+  $0
+,#+end_src
+#+end_src
+
+** seq
+#+begin_src snippet :tangle "org-mode/seq"
+#name : SEQ TODO
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+SEQ_TODO: ${1:STATES} | ${2:FINISHED}
+#+end_src
+
+** src
+#+begin_src snippet :tangle "org-mode/src"
+#name : Source Code Block
+#contributor : Jonathan Arkell <jonnay@jonnay.net>
+# --
+,#+BEGIN_SRC $1$>
+$0$>
+,#+END_SRC$>
+#+end_src
+
+** startup
+#+begin_src snippet :tangle "org-mode/startup"
+#name : Startup
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+STARTUP: ${1:options}
+#+end_src
+
+** tags
+#+begin_src snippet :tangle "org-mode/tags"
+#name : Tags
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+TAGS: $0
+#+end_src
+
+** text
+#+begin_src snippet :tangle "org-mode/text"
+#name : Text
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+TEXT: ${1:text}
+#+end_src
+
+** title
+#+begin_src snippet :tangle "org-mode/title"
+#name : Title Block
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+,#+TITLE: ${1:title}
+#+end_src
