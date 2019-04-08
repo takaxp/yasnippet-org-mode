@@ -1,0 +1,21 @@
+#+title: A YASnippet bundle for Emacs org mode
+
+* Introduction
+
+A fork from [[https://github.com/RickMoynihan/yasnippet-org-mode][RickMoynihan/yasnippet-org-mode]].
+
+* How to build snippets for org mode
+
+1. Go to =`yas-snippet-dirs'= in your system.
+2. Copy and paste =snippets.org= as =`yas-snippet-dirs'= / =snippets.org=.
+3. Create =org-mode= directory under =`yas-snippet-dirs'=.
+4. Edit =snippets.org=.
+5. Tangle =snippets.org= by =M-x org-tangle-babel=.
+
+Then, snippets for org mode will be created in =`yas-snippet-dirs'= / =org-mode=.
+
+Note: existing snippets will be overwritten when tangling.
+
+* Contacts
+
+Send a message to [[https://twitter.com/takaxp][@takaxp]].
